@@ -3,11 +3,52 @@
     <meta charset="utf-8">
     <title>Mocha Tests</title>
     <link href="https://unpkg.com/mocha@4.0.1/mocha.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
 <body>
 
+    <!-- YOUR HTML HERE -->
 
-  <!-- YOUR HTML HERE -->
+  <section id="playArea">
+    <form onsubmit="changeHeroName(); return false" id="heroBox">
+      <div>
+        <strong><label for="name">HERO NAME:</label></strong>
+        <input type="text" id="HeroName" value="PlayerName">
+      </div>
+      <div class="button">
+        <button type="default">Change</button>
+      </div>
+    </form>
+    <div id=statsBox>
+      <p><strong>HERO STATS</strong></p>
+      <dl>
+        <dt>_NAME</dt>
+        <dd id="displayName"></dd>
+        <dt>_HEALTH</dt>
+        <dd id="displayHealth"></dd>
+        <dt>_WEAPON TYPE</dt>
+        <dd id="displayWT"></dd>
+        <dt>_WEAPON DAMAGE</dt>
+        <dd id="displayWD"></dd>
+      </dl>
+    </div>
+    <div>
+      <p id=pointsBox></p>
+    </div>
+    <br>
+    <img id="inn" src="./images/inn.jpg" alt="inn picture" onclick="rest(hero)">
+    <img id="dagger" src="./images/dagger.jpg" alt="dagger picture" onclick="pickUpItem(hero,hero.weapon)">
+    <img id="longsword" src="./images/longsword.jpeg" alt="longsword picture" onclick="pickUpSword(hero,hero.weapon)">
+    <img id="lightsaber" src="./images/lightsaber.png" alt="lightsaber picture" onclick="pickUpLightsaber(hero,hero.weapon)">
+    <img id="bag" src="./images/bag.jpg" alt="bag picture" onclick="equipWeapon(hero)">
+    <!-- <img class="monster" src="./images/Monster.png" alt="monster picture" onclick="fightEnemy(hero,monster)"> -->
+    <!-- <img class="monster" src="./images/Monster.png" alt="monster picture"> -->
+
+
+  </section>
+
+  <br>
+  <br>>
 
 
 
